@@ -152,11 +152,36 @@ db.serialize(function () {
         "X4                  TEXT, " +
         "PAID_AMT            REAL, " +
         "REF_NO              INTEGER, " +
-        "CREATED_BY INTEGER, " +
-        "UPDATED_BY INTEGER, " +
-        "CREATED_TS TEXT, " +
-        "UPDATED_TS TEXT)";
+        "CREATED_BY          INTEGER, " +
+        "UPDATED_BY          INTEGER, " +
+        "CREATED_TS          TEXT, " +
+        "UPDATED_TS          TEXT)";
     db.run(dcpmDetail);
+
+    var dcPurDetail = "CREATE TABLE IF NOT EXISTS DC_PUR_DETAIL( " +
+        "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        "PROD_ID               INTEGER, " +
+        "PUR_ID                INTEGER, " +
+        "SR_NO                 INTEGER, " +
+        "PROD_CODE             TEXT, " +
+        "PROD_DS               TEXT, " +
+        "RATE                  REAL, " +
+        "BOX                   INTEGER, " +
+        "QTY                   INTEGER, " +
+        "TAX                   REAL, " +
+        "FREE                  INTEGER, " +
+        "SCH1                  REAL, " +
+        "SCHEME1               REAL, " +
+        "SCH2                  REAL, " +
+        "SCHEME2               REAL, " +
+        "AMT                   REAL, " +
+        "TAX_AMT               REAL, " +
+        "BACH_NO               INTEGER, " +
+        "CREATED_BY            INTEGER, " +
+        "UPDATED_BY            INTEGER, " +
+        "CREATED_TS            TEXT, " +
+        "UPDATED_TS            TEXT)";
+    db.run(dcPurDetail);
 
 
 });
