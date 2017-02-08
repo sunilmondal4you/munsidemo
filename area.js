@@ -184,6 +184,37 @@ db.serialize(function () {
     db.run(dcPurDetail);
 
 
+    var dcsmDetail = "CREATE TABLE IF NOT EXISTS DCSM_DETAIL( " +
+        "ID                    INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        "DCSMD_ID              INTEGER, " +
+        "DC_NO                 INTEGER, " +
+        "SR_NO                 INTEGER, " +
+        "PROD_CODE             TEXT, " +
+        "SIZE                  INTEGER, " +
+        "RATE                  REAL, " +
+        "QTY                   INTEGER, " +
+        "FREE                  INTEGER, " +
+        "REPL                  INTEGER, " +
+        "DMG                   REAL, " +
+        "DMG_MRP               REAL, " +
+        "DMG_AMT               REAL, " +
+        "RET_QTY               INTEGER, " +
+        "CREATED_BY            INTEGER, " +
+        "UPDATED_BY            INTEGER, " +
+        "CREATED_TS            TEXT, " +
+        "UPDATED_TS            TEXT)";
+    db.run(dcsmDetail);
+
+
+    var desp = "CREATE TABLE IF NOT EXISTS DESP( " +
+        "ID                    INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        "DESP_ID               INTEGER, " +
+        "DESP_DETAIL           TEXT, " +
+        "CREATED_BY            INTEGER, " +
+        "UPDATED_BY            INTEGER, " +
+        "CREATED_TS            TEXT, " +
+        "UPDATED_TS            TEXT)";
+    db.run(desp);
 });
 
 db.close();
