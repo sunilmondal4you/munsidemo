@@ -238,8 +238,7 @@ db.serialize(function () {
         "CREATED_TS            TEXT, " +
         "UPDATED_TS            TEXT)";
     db.run(gl);
-
-
+    
 });
 
 db.close();
