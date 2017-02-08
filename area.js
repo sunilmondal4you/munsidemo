@@ -215,6 +215,31 @@ db.serialize(function () {
         "CREATED_TS            TEXT, " +
         "UPDATED_TS            TEXT)";
     db.run(desp);
+
+
+    var gl = "CREATE TABLE GL1( " +
+        "ID                    INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        "GL_ID                 INTEGER, " +
+        "GL_DATE               TEXT, " +
+        "GL_BY                 TEXT, " +
+        "GL_TO                 TEXT, " +
+        "S_REF                 INTEGER, " +
+        "P_REF                 INTEGER, " +
+        "AMT                   REAL, " +
+        "SRC_ENT               TEXT, " +
+        "CLEARING              TEXT, " +
+        "CHQ_DATE              TEXT, " +
+        "REMARKS1              TEXT, " +
+        "REMARKS2              TEXT, " +
+        "SP_REF                TEXT, " +
+        "NO                    INTEGER, " +
+        "CREATED_BY            INTEGER, " +
+        "UPDATED_BY            INTEGER, " +
+        "CREATED_TS            TEXT, " +
+        "UPDATED_TS            TEXT)";
+    db.run(gl);
+
+
 });
 
 db.close();
