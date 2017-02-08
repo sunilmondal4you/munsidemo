@@ -217,7 +217,7 @@ db.serialize(function () {
     db.run(desp);
 
 
-    var gl = "CREATE TABLE GL1( " +
+    var gl = "CREATE TABLE IF NOT EXISTS GL1( " +
         "ID                    INTEGER PRIMARY KEY AUTOINCREMENT, " +
         "GL_ID                 INTEGER, " +
         "GL_DATE               TEXT, " +
@@ -232,7 +232,7 @@ db.serialize(function () {
         "REMARKS1              TEXT, " +
         "REMARKS2              TEXT, " +
         "SP_REF                TEXT, " +
-        "NO                    INTEGER, " +
+        "NOS                    INTEGER, " +
         "CREATED_BY            INTEGER, " +
         "UPDATED_BY            INTEGER, " +
         "CREATED_TS            TEXT, " +
